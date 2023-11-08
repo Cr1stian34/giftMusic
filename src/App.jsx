@@ -5,11 +5,12 @@ import Register from './pages/Register'
 import PlayListPublic from './pages/PlayListPublic'
 import Page404 from './pages/Page404'
 import Home from './pages/Home'
-import PlayList from './pages/PlayList'
+import PlayList from './pages/PlayLists'
 import PlayListDetail from './pages/PlayListDetail'
 import TrackDetail from './pages/TrackDetail'
 import ArtistDetail from './pages/ArtistDetail'
 import PrivateRoutes from './components/layouts/auth/PrivateRoutes'
+import PlayLists from './pages/PlayLists'
 
 function App() {
 
@@ -24,8 +25,8 @@ function App() {
         {/* Rutas privadas */}
         <Route element={<PrivateRoutes/>}>
           <Route path='/' element={<Home />} />
-          <Route path='/palylist' element={<PlayList />} />
-          <Route path='/palylist/:id' element={<PlayListDetail />} />
+          <Route path='/playlists' element={<PlayLists />} />
+          <Route path='/playlists/:id' element={<PlayListDetail />} />
           <Route path='/tracks/:id' element={<TrackDetail />} />
           <Route path='/artists/:id' element={<ArtistDetail />} />
         </Route>
